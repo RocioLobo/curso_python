@@ -1,4 +1,4 @@
-#1.Utilizando operadores de comparación, determina si un numero introducido por el usuario tiene una longitud mayor o igual que 3 y a su vez es menor que 10
+#1.Utilizando operadores de comparación, determina si un numero introducido por el usuario tiene una longitud mayor o igual10
 numero_usuario:str=input('ingrese por favor un numero: ')
 longitud=len(numero_usuario)
 comparar=longitud >= 3 and longitud < 10
