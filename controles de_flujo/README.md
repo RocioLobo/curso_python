@@ -10,16 +10,22 @@ la sentencia de decicion en pyton es `if` .en su estructura debemos añadir una 
 if true:
     print("es verdad")
 ```
->else - elif
+`>else - elif`
+
 ```pyton
 edad:int=(input("escribe tu edad"))
 if edad>=18:
 print("eres mayor")
 else:
     print("eres menor de edad")
+    
 ```
 ## segundo ejemplo if almacena do en variables:
 ```python
+edad_dos:int=int(input("escribe tu edad:"))
+respuesta:str="eres mayor" if edad_dos>=18 else "eres menor"
+print(respuesta)
+```
 
 
 ## ciclos
@@ -33,7 +39,7 @@ y sintaxis en la siguiente
 # del 1 al 10
 for n in range (1;11):
     print(n)
-    
+
 ## ejemplo
 ## for n in  "aeiou" te permite mostrar las letras
     print(n)
