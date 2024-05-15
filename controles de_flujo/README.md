@@ -46,6 +46,13 @@ for n in range (1;11):
 ## for i,l inenumerate("aeiou") permite mostrar el indice y la letra
        print(f" el indice es{i} y la letra es {l}")
 
+# espacios de memoria qe ocupan
+##`range` es el que ocupa menos memoria
+## oraciones medianas en **in** es mas lenta pero menos memoria
+## enumerate cuando las oraciones son pequeñas mas memoria
+## enumerate en oraciones largas  ocupa  menos memoria
+
+
 ```
 > para while
 

@@ -53,13 +53,22 @@ for i in range(1,edad+1):
 #mostrar por pantalla la variable global con las tres ultimas letras del nombre de cada persona.
 #pedir tres nombres de tres personas
 ultima_letra:str=""
-for_ in range(3):
+for i in range(3):
    nombre:str=input("escribe tu nombre:")
 #ultima_letra+=nombre[-1]
    last_letter:str=nombre[-1]
    ultima_letra+=last_letter
 #ultima_letra=ultima_letra+last_letter
 print(ultima_letra)
+
+#crear un programa que muestre por terminal la siguiente figura:
+#a
+#ee
+##iii
+#0000
+#uuuuu
+
+
 
 
 
