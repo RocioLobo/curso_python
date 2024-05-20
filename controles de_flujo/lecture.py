@@ -113,4 +113,11 @@ apellidos.lower() #convierte el texto en minuscula
 
 
 segundo_nombre="luis"
-print(segundo_nombre.capitalize()) #convierte la primera letra en mayuscula
+print(segundo_nombre.capitalize()) #convierte la primera letra en mayuscula.
+
+
+# crear un programa que pida la cantidad de notas que se debe registrar luego pedira las  notas e imprimira el promedio.
+condicion =True
+while condicion:
+    cant=input(" igrese la cantidad de notas: ")
+    if cant="cant"
