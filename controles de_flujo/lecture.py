@@ -69,15 +69,6 @@ print(ultima_letra)
 #uuuuu
 
 
-
-
-
-
-
-
-
-
-
 # ejemplos de if - else primer ejemplo de if estructurado:
 
 edad:int=int(input("escribe tu edad"))
@@ -87,4 +78,39 @@ else:
     print("eres menor de edad")
 
 
+ #EJEMPLOS while
+condicion=True
+while condicion:
+    print("hola")
+    
 
+#Ejemplos
+
+condicion=True
+while condicion:
+    eval=input("desea continuar[s/n]:")
+    if eval=="s":
+        print("continuas en el bucle")
+        continue
+    else:
+        print("se termino el programa")
+        condicion=False
+        break
+
+contador=0
+while contador<=5:
+    print(contador)
+    contador+1
+print(f"valor final{contador}")
+
+# METODOS DE STRING -array
+
+nombre="jose"
+nombre.upper()# convierte el texto en mayuscula
+
+apellidos="alvarez"
+apellidos.lower() #convierte el texto en minuscula
+
+
+segundo_nombre="luis"
+print(segundo_nombre.capitalize()) #convierte la primera letra en mayuscula

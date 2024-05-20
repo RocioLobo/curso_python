@@ -54,5 +54,12 @@ for n in range (1;11):
 
 
 ```
-> para while
+>### para while
+Es un mecanismo que usa `pyton` para repetir instrucciones, la semantica es la sentencia es: `mientras se cumpla la condicion has algo` 
+```
+pyton
+while():true  siempre imprimira verdad
+    print("hola")
+    
+> 
 

@@ -160,3 +160,4 @@ elif edad >4 and edad<=18:
 	print("debe pagar 5€")
 else:
 	print("debe pagar 10 €")
+       

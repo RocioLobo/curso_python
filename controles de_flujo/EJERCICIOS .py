@@ -26,6 +26,17 @@ else:
      for i in range(numero,-1,-1):
         print(i, end=",")
 
+# crear un programa que me muestra la tabla de multiplicar de 1 hasta 5
+
+
+#crear un programa  que pida un numero y muestre la tabla de multiplicar de ese numero.
+
+num:int=int(input("ingrese un numero por favor:"))
+for n in range(1,12):
+    resultado=num*n
+    print(f"{numero}x{n}={numero*n}")
+
+
 
 
 
