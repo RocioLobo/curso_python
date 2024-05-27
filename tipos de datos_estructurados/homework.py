@@ -32,10 +32,16 @@ lista_alumnos=[
     }
 ]
 
-lista_alumnos.remove("nombre":"abel",
+lista_alumnos.remove({
+        "nombre":"abel",
         "apellido":"castillo",
-        "edad":20,)
-indice=lista_alumnos.index(""nombre":"luz",
+        "edad":20,
+        
+})
+indice=lista_alumnos.index({
+    
+        "nombre":"luz",
         "apellido":"jimenez",
-        "edad":19,")
+        "edad":19,
+    })
 print(lista_alumnos[indice]) 

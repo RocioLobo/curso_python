@@ -1,10 +1,13 @@
 # tipos de datos estructurados(TDA - Tipos de datos abstractos) tenemos como la lista.
-#lista - sus valores o elementos se pueden  actualizar, eliminar
+#lista 
+- sus valores o elementos se pueden  actualizar, eliminar
 lista=["abel",20,5.2,.5,false,["texto",.2]]
 ```pyton
-#tupla- sus valores o elementos no pueden ser modificados o eliminados.
+#tupla
+- sus valores o elementos no pueden ser modificados o eliminados.
 tupla=("abel",20,5.2,False,[])
-#diccionarios se e conoce como objetos
+#diccionarios
+ se e conoce como objetos
 # los diccionarios almacenan los datos con clave y valor y te muestran el valor al imprimir 
 diccionario={"nombre":"antonio","edad":15,"sexo":False}
 ```
@@ -13,8 +16,30 @@ diccionario={"nombre":"antonio","edad":15,"sexo":False}
 
 ```pyton
 lista_alumnos=[
-    {
-        "nombre
+   
+
+{
+        "nombre":"abel",
+        "edad":20,
+        "amigos":["no tiene"]
+    },{
+        "nombre":"ruth",
+        "edad":18,
+        "amigos":["flor","rocio"]
+
+    },{
+        "nombre":"jose ma",
+        "edad":50,
+
+    },{
+        "nombre":"luz",
+        "apellido":"jimenez",
+        "edad":19,
+
+    },{
+        "nombre":"Rony",
+        "edad":15,
+        
     }
 ]
 
