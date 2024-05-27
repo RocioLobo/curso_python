@@ -35,12 +35,12 @@ nuevo_texto=texto_largo.split(" ")
 print(nuevo_texto)
 
 
-#JOIN al poner las comillas te sepra si pones espacion si pones junto saldra junto.
+#JOIN al poner las comillas te separa si pones junto las comillas el texto saldra junto.y si pones un espacio el texto saldra con espacio.
 texto_largo="loquitas_.mp4"
 nuevo_texto=texto_largo.split("_")
 print(" ".join(nuevo_texto))
 
-#con texto largo
+#con texto largo : cuando quieres separar ya sea con comas puntos o espacios.
 texto_largo="este es un texto largo chiquititas y chiquititos"
 nuevo_texto=texto_largo.split(" ")
-print(",".join(nuevo_texto))
+print(",".join(nuevo_texto)) 
