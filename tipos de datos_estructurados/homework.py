@@ -48,10 +48,41 @@ print(lista_alumnos[indice])
 
 
 
-#2.Crear una lista con tres diccionarios donde tendran los datos de sus mascotas (nombre ,edad ,sexo ,raza)
+#2.Crear una lista con 4 diccionarios donde tendran los datos de sus mascotas (nombre ,edad ,sexo ,raza)
 
 #Tareas
 # mostrar la lista con los 4 diccionarios
 # editar el tercer registro y cambiarle la edad sin modificar la lista original
 # mostrar la lista original y luego la lista con el tercer registro modificado.
-lista
+
+lista_mascotas=[
+
+    {
+        "nombre":"chocolate",
+        "edad":2,
+        "sexo":"macho",
+        "raza":"pitbul"
+    },{
+        "nombre":"miel",
+        "edad":4,
+        "sexo":"hembra",
+        "raza":"terries"
+    },{
+        "nombre":"pinina",
+        "edad":3,
+        "sexo":"hembra",
+        "raza":""
+
+    },{
+        "nombre":"samuel",
+        "edad":7,
+        "sexo":"macho",
+        "raza":"pastor"
+
+
+        
+    }
+]
+
+lista_mascotas[3]["edad"]=1
+print(lista_mascotas)
