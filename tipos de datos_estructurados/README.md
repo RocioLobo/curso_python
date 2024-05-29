@@ -8,6 +8,7 @@ lista=["abel",20,5.2,.5,false,["texto",.2]]
 tupla=("abel",20,5.2,False,[])
 #diccionarios
  se e conoce como objetos
+
 # los diccionarios almacenan los datos con clave y valor y te muestran el valor al imprimir 
 diccionario={"nombre":"antonio","edad":15,"sexo":False}
 ```
@@ -111,7 +112,47 @@ print(lista_nombres[indice])  te mostrara el indice del nombre seleccionado.
 
 pertenencia="edith" in lista_nombres #true False
 
+```pyton
+
+### 5. Comparación de listas: Podemos hacer uso de los operadores de comparación para comparar listas.
+*Ejem:
+```python
+Comparar==[1,2,3]>[1,2,4]    # Se compara un elemento de la lista 1 con los elementos de la lista 2.
+# El 1 no lo evalúa por que son iguales en ammbas listas.
+# El dos no lo evalúa por que los elementos son iguales en ambas listas.
+# El 3 si evalúa por que es menor que 4.
+# Entonces la primera lista es menor que la segunda lista.
+print(compara)
+# Salida
+
+### 6.cuidado con las copias
+
+
+###7. FE DE ERRATAS (ACTUALIZAR LISTAS)
 ```
+lista=[1,2,3,4,5,6]
+lista[0]=2
+print(lista)
+te mostrara [2,3,4,5,6]
+
+#modificando lista con diccionario
+alumnos=[
+    {
+        "nombre":"abel",
+        "edad":15
+    },
+    {
+        "nombre":"antony",
+        "edad":29
+
+    }
+]
+
+alumnos[0]["edad"]=30
+alumnos[0]={"nombre"}:"mafer","edad":15
+alumnos[1]["sexo"]="por definir
+print(alumnos)
+
 
 
 

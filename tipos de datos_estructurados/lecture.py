@@ -44,3 +44,46 @@ print(" ".join(nuevo_texto))
 texto_largo="este es un texto largo chiquititas y chiquititos"
 nuevo_texto=texto_largo.split(" ")
 print(",".join(nuevo_texto)) 
+
+#DATO PRIMITIVO
+
+nombre="abel"
+print(id("abel"))
+otro_nombre=nombre
+print(id(otro_nombre))
+
+#Dato estructurado
+lista_original=[1,2,3,4] 
+copia_lista=lista_original
+
+lista_original[-1]=15 #esto es lo modificado
+print(copia_lista) #copia la referencia modificada
+
+# crear un programa que reciba una lista desordenada y muestre por terminal una lista ordenada y la lista previa a ser ordenada.
+lista=[4,76,1,3,6,8,2]
+copia_lista=lista.copy()
+copia_lista.sort()
+print(lista)
+print(copia_lista)
+
+
+
+alumnos=[
+    {
+        "nombre":"abel",
+        "edad":15
+    },
+    {
+        "nombre":"antony",
+        "edad":29
+
+    }
+]
+
+alumnos[0]["edad"]=30
+alumnos[0]={"nombre":"mafer","edad":15}
+alumnos[1]["sexo"]="por definir"
+print(alumnos)
+
+
+
