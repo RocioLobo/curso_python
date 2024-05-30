@@ -86,3 +86,38 @@ lista_mascotas=[
 
 lista_mascotas[3]["edad"]=1
 print(lista_mascotas)
+
+# OTRA MANERA DE RESOLVER
+
+lista_mascotas=[
+
+    {
+        "nombre":"chocolate",
+        "edad":2,
+        "sexo":"macho",
+        "raza":"pitbul"
+    },{
+        "nombre":"miel",
+        "edad":4,
+        "sexo":"hembra",
+        "raza":"terries"
+    },{
+        "nombre":"pinina",
+        "edad":3,
+        "sexo":"hembra",
+        "raza":""
+
+    },{
+        "nombre":"samuel",
+        "edad":7,
+        "sexo":"macho",
+        "raza":"pastor"
+
+
+        
+    }
+]
+print(lista_mascotas)
+copia_lista=lista_mascotas.copy()
+copia_lista[3]["edad"]=1
+print(copia_lista)
