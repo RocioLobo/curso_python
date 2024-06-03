@@ -87,6 +87,9 @@ lista_mascotas=[
 lista_mascotas[3]["edad"]=1
 print(lista_mascotas)
 
+
+
+
 # OTRA MANERA DE RESOLVER
 
 lista_mascotas=[
@@ -121,3 +124,60 @@ print(lista_mascotas)
 copia_lista=lista_mascotas.copy()
 copia_lista[3]["edad"]=1
 print(copia_lista)
+
+
+#un empresario de alquiler de autos desea guardar en una base  datos la informacion de sus vehiculos, proceso que desea automatizar con un sistema informatico,las acciones que puede realizar el empresario son:
+#ver la lista de autos que tiene,podra tambien actualizar la lista y agregar un nuevo vehiculo
+
+#CASOS DE USO
+
+# COMO:
+#empresario de alquiler de autos.
+
+# QUIERE:
+# o  desea guardar la inoformacion de sus vehiculos ,como tambien automatizar con un sistema informatico para ver las acciones que puede realizar como :
+
+# PARA:
+# que pueda ver la lista de autos, 
+#tambien actualizar  y agregar un nuevo vehiculo
+
+#PROGRAMACION
+
+
+lista_vehiculos= [
+   
+    {
+        "modelo":"sentra",
+        "marca":"nissan",
+        "color":"plomo",
+        "año":2012,
+        "precio":30.000
+    },{
+
+        "modelo":"yaris",
+        "marca":"toyota",
+        "color":"rojo",
+        "año":2011,
+        "precio":50.000
+        
+
+    },{
+       
+       "modelo":"starex",
+        "marca":"hyundai",
+        "color":"verde",
+        "año":2009,
+        "precio":80.000
+        
+
+   
+    }
+]
+print(lista_vehiculos)
+lista_vehiculos[1]["color"]="dorado",
+lista_vehiculos.append({"modelo":"addx","marca":"toyota", "color":"azul", "año":2017, "precio":70.000 })
+print(lista_vehiculos)
+
+
+
+
