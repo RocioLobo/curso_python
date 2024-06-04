@@ -149,7 +149,7 @@ alumnos=[
 ]
 
 alumnos[0]["edad"]=30
-alumnos[0]={"nombre"}:"mafer","edad":15
+alumnos[0]={"nombre":"mafer","edad":15}
 alumnos[1]["sexo"]="por definir
 print(alumnos)
 
