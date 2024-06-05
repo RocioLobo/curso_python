@@ -87,3 +87,32 @@ print(alumnos)
 
 
 
+# LISTAS Y DICCIONARIOS POR COMPRESION
+
+#  Crear una lista de números enteros del siguiente texto:
+texto="1,4,8,9,6"
+nueva_lista=[]
+for n in texto.split(","):
+    nueva_lista.append(int(n))
+print(nueva_lista)
+
+
+#aplicando la tecnica vlc valor bucle y condicion
+texto="1,4,8,9,6"
+nueva_lista=[int(n)for n in texto.split(",") if int (n)%2==0 ]            
+print(nueva_lista)
+
+
+# diccionarios por compresion
+
+lista_amigos=["abel","antony","edith","ruth"]
+diccionario={}
+for _,v in enumerate(lista_amigos):
+    diccionario[v]=len(v) #te muestra el valor de la lista
+print(diccionario)
+
+# aplicando elvlc
+
+lista_amigos=["abel","antony","edith","ruth"]
+diccionario={amigo:len(amigo) for amigo in lista_amigos}
+print(diccionario)
