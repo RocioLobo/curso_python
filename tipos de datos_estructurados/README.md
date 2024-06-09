@@ -155,6 +155,36 @@ print(alumnos)
 
 
 
+### 8. Listas y diccionarios por compreción:
+ Es una técnica pythonica que nos permite crear listas y diccionarios en una sola línea combinando bucles y decisiones.
+> [!NOTE]
+> *VLC*
+#  Crear una lista de números enteros del siguiente texto:
+texto="1,4,8,9,6"
+nueva_lista=[]
+for n in texto.split(","):
+    nueva_lista.append(int(n))
+print(nueva_lista)
+# aplicando la tecnica vlc valor bucle y condicion
+texto="1,4,8,9,6"
+nueva_lista=[int(n)for n in texto.split(",") if int (n)%2==0 ]            
+print(nueva_lista)
+
+# diccionarios por compresion
+
+lista_amigos=["abel","antony","edith","ruth"]
+diccionario={}
+for _,v in enumerate(lista_amigos):
+    diccionario[v]=len(v)
+print(diccionario)
+
+# aplicando elvlc
+
+lista_amigos=["abel","antony","edith","ruth"]
+diccionario={amigo:len(amigo) for amigo in lista_amigos}
+print(diccionario)
+
+
 
 
 
