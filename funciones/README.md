@@ -84,6 +84,70 @@ def lista():
 # retorna["hola",45]
 def dicc():
      return{"nombre":"jose","edad":45}
+
+
+## parametros y argumentos
+ si una funcion no disposiera de valores de entrada estaria limitada en su actuacion.
+ Es por ello que los `parametros` no permiten variar los datos que consume una funcion para obtener distintos resultados
+ **ejemplo**
+ *crear una funcion que recibe un valor numerico y retorna su raiz cuadrada
+ 
+def sqrt(valor):
+    return valor**(1/2)
+# NOTA: en este caso, el valor 4 es un argumento de la funcion
+sqrt(4)
+
+cuando llamamos a na funcion con `argumentos`, los valores de estos argumentos se copian en los correspondientes
+`parametros` dentro de la funcion
+
+def ejm(a,b,c):
+    return a+b+c
+ejm(4,5,6)
+
+### Argumentos nominales
+en esta aproximacion los argumentos no son copiados en un orden especifico sino que 
+**se asignan por nombre a cada parametro**.ello nos permite evitar el problema de
+conocer o recordar cual es el orden de los parametros en la definicion de la funcion.
+para utilizarlo, basta con realizar una asignacion de cada argumento en la propia llamada a la funcion.
+**ejemplo**
+
+def build_cpu(familia,num_core,recuencia):
+    print(f"""
+        la cpu de la familia {familia},
+        con {num_core} cores y con una
+        frecuencia de {frecuencia}
+    """)
+
+# haciendo uso de argumentos nominales
+los argumentos son copiados en orden especifico, en este  caso debemos conocer o recordar cual es el orden de los parametros
+build_cpu(num_core=4,familia="intel",frecuencia=2.7)
+
+
+### Argumentos posicionales
+build_cpu("intel",4,2,7)
+
+### Parametros por defecto
+
+es posible especificar **valores por defecto** en los parametros de una funcion , en
+el caso de que no se proporcione un valor al argumento en la llamada a la funcion , el
+parametro correspondiente tomara el valor definido por defecto.
+**ejemplo**
+
+def alumnos(nom,app,estado="aprobado"):
+
+alumnos("ruth","castillo")
+alumno("antony","crucez","desaprobado")
+
+## desempaquetado/Empaquetado de argumentos(tarea)
+cada uno con su ejemplo
+
+
+
+
+### FUNCIONES INTERNAS DE PYTON (tarea)
+
+
+
       
 
   

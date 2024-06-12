@@ -10,3 +10,46 @@ else:
 
 
 # print solo muestra por terminal
+
+
+# return cuando queremos que muestra funcion devuelva o retporne un tipo de dato o un tipo de dato estructurado.
+
+
+#cear una funcion que me muestre el producto de dos numeros
+def procducto(a,b):
+    return a*b
+
+
+#crear una funcion que me retorne una lista de tres  numeros
+
+def lista_numeros():
+    return [3,2,6]
+
+# print usaremos cada vez que nuestra funcion retorne un mensaje
+# crear una funcion que por parametro reciba un nombre y retorne un mensaje de bienvenida con el nombre
+
+def mensaje(nombre):
+    print(f"hola,{nombre},bienvenido al chongo")
+
+
+# crear una funcion que reciba por parametro una lista de numeros y me devuelva el numero menor ,mostrar por terminal el valor retornado por la funcion.
+lista=[4,3,6,78,7]
+def Min(l):
+    minimo=l[0]
+    for n in l:
+        if n < minimo:
+            minimo=n
+    return minimo
+print(Min(lista))
+
+# crear una funcion que reciba como parametro el nombre y la edad de una persona mi funcion debera retornar un diccionario con los datos, luego mostrar por terminal el valor de retorno de mi funcion.
+
+nombre="abel"
+edad=19
+def persona(nom,edad):
+    return{
+        "nombre":nom,
+        "edad":edad
+    }
+print(persona(nombre,edad))
+
