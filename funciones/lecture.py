@@ -90,3 +90,46 @@ def get_words_with_all_vowels(text: str) -> list[str]:
 
 get_words_with_all_vowels('La euforia de ver el riachuelo fue inmensa')
 ['euforia', 'riachuelo']
+
+
+
+# (CLASE) EMPAQUETANDO /DESENPAQUETADO DE ARGUMENTOS
+
+#ejemplos
+#EMPAQUETANDO 
+
+#def suma(*args):
+#    nueva_lista=list(args)
+#    nueva_lista[0]=10
+#    print(nueva_lista)
+# suma(4,7,8,5,2,4) 
+
+# crear una funccion que reciba por argumentos n numeros y retorne una lista con los numeros pares
+
+
+def num_pares(*args):
+    pares=[]
+    for n in args:
+        if n%2==0:
+            pares.append(n)
+        return pares
+print(num_pares(8,4,16,4,5,4))   
+
+
+#por compresion
+#return [n for n in args if n%2==0]
+print(num_pares(8,5,4,7,9,25,4,7,12))
+
+
+
+#empaqueta/desempaqueta de argumentos nominales
+
+def alumnos(** kwargs):
+    print(kwargs)
+alumnos(nombre="miguel",apellido="largo",edad=30)
+
+
+def alumnos(** kwargs):
+    kwargs["nombre"]="abel"
+    print(kwargs)
+alumnos(nombre="miguel",apellido="largo",edad=30)

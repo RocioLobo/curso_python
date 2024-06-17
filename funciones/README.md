@@ -305,4 +305,18 @@ Cuando se trabaja con números matemáticos es importante disponer de una funci�
 #### Bin().
  Convierte un número entero en una cadena binaria incluyendo el prefijo “0b”.
 
-  
+
+## AVERIGUAR
+### Tipos de funciones
+### Funciones anonimas (Funciones lambda)
+una funcion que no tiene nombre
+### Funciones clousure
+una funcion que dentro tiene otra funcion
+`def saludo(nombre):
+    print(f"bienvenido {nombre}")
+### Funciones callback
+Funciones que reciben por parametro otra funcion
+`int(input("ingrese un numero:"))`
+
+
+### Programacion funcional
