@@ -284,24 +284,25 @@ sum_power(3, 4, power=True)  # Único modo posible de llamada
 Funciones interiores
 Está permitido definir una función dentro de otra función. Es lo que se conoce como función interior.
 
-Veamos un **ejemplo** en el que extraemos las palabras de un texto que contienen todas las vocales, haciendo uso de una función interior que nos devuelve el número de vocales distintas que tiene cada palabra:
-
-def get_words_with_all_vowels(text: str) -> list[str]:
-    VOWELS = 'aeiou'
-    def get_unique_vowels(word: str) -> set[str]:
-        return set(c for c in word if c in VOWELS)
- result = []
-    for word in text.split():
-        if len(get_unique_vowels(word)) == len(VOWELS):
-            result.append(word)
-    return result
-
-get_words_with_all_vowels('La euforia de ver el riachuelo fue inmensa')
-['euforia', 'riachuelo']
-Truco
 
 
-
-      
+#### Sum(). 
+Una función muy interesante que facilita la suma de valores de una lista o tupla en Python (siempre hablando de números como valores).
+#### Min().
+ Con esta función se puede hallar el número más pequeño dentro de una lista, tupla o dos o más argumentos.
+Max(). 
+La función contraria a Min() que, en lugar del número más pequeño, devuelve el valor más grande o mayor.
+#### Range().
+ Función de Python para generar una sucesión de números enteros de forma personalizada.
+#### Round(). 
+Cuando se trabaja con números matemáticos es importante disponer de una función capaz de realizar redondeos después de la coma, siendo esta la función de Python que se encarga de este proceso.
+#### Hex ().
+ Esta función que se incorporó a partir de la versión 3 de Python, convierte un número entero en una cadena hexadecimal con prefijo “0x”.
+#### Abs().
+ Al utilizar esta función sobre un número se obtiene su valor absoluto.
+#### Id().
+ Se trata de una función nativa que muestra un número entero que es único para cada objeto en memoria.
+#### Bin().
+ Convierte un número entero en una cadena binaria incluyendo el prefijo “0b”.
 
   
