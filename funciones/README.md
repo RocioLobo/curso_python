@@ -284,7 +284,7 @@ sum_power(3, 4, power=True)  # Único modo posible de llamada
 Funciones interiores
 Está permitido definir una función dentro de otra función. Es lo que se conoce como función interior.
 
-
+### tenemos lista de funciones internas
 
 #### Sum(). 
 Una función muy interesante que facilita la suma de valores de una lista o tupla en Python (siempre hablando de números como valores).
