@@ -53,3 +53,40 @@ def persona(nom,edad):
     }
 print(persona(nombre,edad))
 
+#1. desempaquetado/Empaquetado de argumentos(tarea)
+# vamos a implementar una función para sumar un número variable de valores.
+# EMPAQUETANDO
+#vamos a hacer uso del * para empaquetar los argumentos posicionales:
+## EMPAQUETANDO
+
+def _sum(*values):
+    print(f'{values=}')
+    result = 0
+    for value in values:  # values es una tupla
+        result += value
+    return result
+_sum(4, 3, 2, 1)
+values=(4, 3, 2, 1)
+10
+
+# DESENPAQUETANDO: _sum(4, 3, 2, 1)
+_sum(*values)
+values=(4, 3, 2, 1)
+# 10
+
+# FUNCIONES INTERNAS EN PYTON.
+
+# en el que extraemos las palabras de un texto que contienen todas las vocales, haciendo uso de una función interior que nos devuelve el número de vocales distintas que tiene cada palabra:
+
+def get_words_with_all_vowels(text: str) -> list[str]:
+    VOWELS = 'aeiou'
+    def get_unique_vowels(word: str) -> set[str]:
+        return set(c for c in word if c in VOWELS)
+    result = []
+    for word in text.split():
+        if len(get_unique_vowels(word)) == len(VOWELS):
+            result.append(word)
+    return result
+
+get_words_with_all_vowels('La euforia de ver el riachuelo fue inmensa')
+['euforia', 'riachuelo']

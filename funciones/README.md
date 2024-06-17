@@ -138,13 +138,167 @@ def alumnos(nom,app,estado="aprobado"):
 alumnos("ruth","castillo")
 alumno("antony","crucez","desaprobado")
 
-## desempaquetado/Empaquetado de argumentos(tarea)
-cada uno con su ejemplo
+# desempaquetado/Empaquetado de argumentos(tarea)
+
+Python nos ofrece la posibilidad de **empaquetar y desempaquetar argumentos** cuando estamos invocando a una función, tanto para argumentos posicionales como para argumentos nominales.
+
+Y de esto se deriva el hecho de que podamos utilizar un número variable de argumentos en una función, algo que puede ser muy interesante según el caso de uso que tengamos.
+
+### Empaquetar/Desempaquetar argumentos posicionales
+Si utilizamos el operador `*` delante del nombre de un parámetro posicional, estaremos indicando que los argumentos pasados a la función se **empaqueten** en una tupla.
+
+#### Vamos  a ver un ejemplo en el que vamos a implementar una función para sumar un número variable de valores. La función que tenemos disponible en Python no cubre este caso:
+sum(4, 3, 2, 1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: sum() takes at most 2 arguments (4 given)
+
+
+Para superar esta «limitación» vamos a hacer uso del * para empaquetar los argumentos posicionales:
+## EMPAQUETANDO
+
+def _sum(*values):
+    print(f'{values=}')
+    result = 0
+    for value in values:  # values es una tupla
+        result += value
+    return result
+_sum(4, 3, 2, 1)
+values=(4, 3, 2, 1)
+10
+
+###### Existe la posibilidad de usar el asterisco * en la llamada a la función para **desempaquetar** los argumentos posicionales:
+
+values = (4, 3, 2, 1)
+
+_sum(values)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 4, in _sum
+TypeError: unsupported operand type(s) for +=: 'int' and 'tuple'
+
+
+## Desempaquetado: _sum(4, 3, 2, 1)
+_sum(*values)
+values=(4, 3, 2, 1)
+# 10
+
+## Empaquetar/Desempaquetar argumentos nominales
+
+Si utilizamos el operador ** delante del nombre de un parámetro nominal, estaremos indicando que los argumentos pasados a la función se **empaqueten en un diccionario.**
+
+#### Supongamos un ejemplo en el que queremos encontrar la persona con mayor calificación de un examen. Haremos uso del ** para empaquetar los argumentos nominales:
+
+def best_student(**marks):
+    print(f'{marks=}')
+    max_mark = -1
+    for student, mark in marks.items():  # marks es un diccionario
+        if mark > max_mark:
+            max_mark = mark
+            best_student = student
+    return best_student
 
 
 
+## Convenciones
+En muchas ocasiones se utiliza **args** como nombre de parámetro para **argumentos posicionales** y **kwargs** como nombre de parámetro para argumentos nominales. Esto son únicamente convenciones, no hay obligación de utilizar estos nombres. Así, podemos encontrar funciones definidas de la siguiente manera:
 
-### FUNCIONES INTERNAS DE PYTON (tarea)
+def func(*args, **kwargs):
+    # TODO
+    pass
+### Forzando modo de paso de argumentos
+Si bien Python nos da flexibilidad para pasar argumentos a nuestras funciones en modo nominal o posicional, existen opciones para forzar que dicho paso sea obligatorio para una determinada modalidad.
+
+### Argumentos sólo nominales
+A partir de Python 3.0 se ofrece la posibilidad de obligar a que determinados parámetros de la función sean pasados sólo por nombre.
+
+Para ello, en la definición de los parámetros de la función, tendremos que incluir un parámetro especial * que delimitará el tipo de parámetros. Así, todos los parámetros a la derecha del separador estarán obligados a ser nominales:
+
+
+Separador para especificar parámetros sólo nominales
+
+**Ejemplo**:
+
+def sum_power(a, b, *, power=False):
+    if power:
+        a **= 2
+        b **= 2
+    return a + b
+
+sum_power(3, 4)
+7
+
+sum_power(a=3, b=4)
+7
+
+sum_power(3, 4, power=True)
+25
+
+sum_power(3, 4, True)
+
+### Argumentos sólo posicionales
+A partir de Python 3.8 se ofrece la posibilidad de obligar a que determinados parámetros de la **función sean pasados sólo por posición**.
+
+Para ello, en la definición de los parámetros de la función, tendremos que incluir un parámetro especial / que delimitará el tipo de parámetros. Así, todos los parámetros a la izquierda del delimitador estarán **obligados a ser posicionales:**
+
+
+Separador para especificar parámetros sólo posicionales
+
+**Ejemplo:**
+
+def sum_power(a, b, /, power=False):
+    if power:
+        a **= 2
+        b **= 2
+    return a + b
+
+
+sum_power(3, 4)
+7
+
+sum_power(3, 4, True)
+25
+
+sum_power(3, 4, power=True)
+25
+
+sum_power(a=3, b=4)
+arguments: 'a, b'
+
+## Fijando argumentos posicionales y nominales
+Si mezclamos las dos estrategias anteriores podemos forzar a que una función reciba argumentos de un modo concreto.
+
+Continuando con el **ejemplo** anterior, podríamos hacer lo siguiente:
+
+def sum_power(a, b, /, *, power=False):
+    if power:
+        a **= 2
+        b **= 2
+    return a + b
+
+
+sum_power(3, 4, power=True)  # Único modo posible de llamada
+
+#
+## FUNCIONES INTERNAS DE PYTON (tarea)
+Funciones interiores
+Está permitido definir una función dentro de otra función. Es lo que se conoce como función interior.
+
+Veamos un **ejemplo** en el que extraemos las palabras de un texto que contienen todas las vocales, haciendo uso de una función interior que nos devuelve el número de vocales distintas que tiene cada palabra:
+
+def get_words_with_all_vowels(text: str) -> list[str]:
+    VOWELS = 'aeiou'
+    def get_unique_vowels(word: str) -> set[str]:
+        return set(c for c in word if c in VOWELS)
+ result = []
+    for word in text.split():
+        if len(get_unique_vowels(word)) == len(VOWELS):
+            result.append(word)
+    return result
+
+get_words_with_all_vowels('La euforia de ver el riachuelo fue inmensa')
+['euforia', 'riachuelo']
+Truco
 
 
 
