@@ -307,7 +307,7 @@ Cuando se trabaja con números matemáticos es importante disponer de una funci�
 
 
 ## AVERIGUAR
-### Tipos de funciones
+# Tipos de funciones
 ### Funciones anonimas (Funciones lambda)
 una funcion que no tiene nombre lambda es una palabra reservada.
 lambda:"hola"
