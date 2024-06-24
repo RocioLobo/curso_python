@@ -312,7 +312,7 @@ Cuando se trabaja con números matemáticos es importante disponer de una funci�
 una funcion que no tiene nombre lambda es una palabra reservada.
 lambda:"hola"
 
-# normal tiene nombre y no tiene return
+#### normal tiene nombre y no tiene return
 def saludo
 
 ### Funciones clousure
