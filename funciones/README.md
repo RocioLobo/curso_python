@@ -309,14 +309,60 @@ Cuando se trabaja con números matemáticos es importante disponer de una funci�
 ## AVERIGUAR
 ### Tipos de funciones
 ### Funciones anonimas (Funciones lambda)
-una funcion que no tiene nombre
+una funcion que no tiene nombre lambda es una palabra reservada.
+lambda:"hola"
+
+# normal tiene nombre y no tiene return
+def saludo
+
 ### Funciones clousure
 una funcion que dentro tiene otra funcion
 `def saludo(nombre):
     print(f"bienvenido {nombre}")
+
 ### Funciones callback
 Funciones que reciben por parametro otra funcion
-`int(input("ingrese un numero:"))`
+funciones callback son ejemplo:
+`print` y
+`int(input("ingrese un numero:"))` son callback
+
+ejemplo callback:
+
+int(input())
+
+def mensaje(m:function):
+    print(m)
+
+##### funcion normal
+
+def pedir_nombre():
+    nombre=input("ingresa tu nombre")
+    return nombre
+mensaje(pedir_nombre())
+
 
 
 ### Programacion funcional
+es la programacion  funcional no requiere que sepas como se desarrollo y ejecuta el procesamiento de la informacion
+**ejemplo**
+```pyton
+
+# programacion iterativa
+
+lista=[5,7,8,4,1]
+def num_minimo(l):
+    minimo=l[0]
+    for n in l:
+        if n < minimo:
+            minimo=n
+    return minimo
+
+# programacion funcional
+
+minaa(lista)
+
+```
+
+
+#### averiguar sobre map(),filter(),reduce() (TAREA) cada uno con informacion y ejemplos
+

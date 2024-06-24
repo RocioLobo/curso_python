@@ -133,3 +133,36 @@ def alumnos(** kwargs):
     kwargs["nombre"]="abel"
     print(kwargs)
 alumnos(nombre="miguel",apellido="largo",edad=30)
+
+## ejemplos de lambda
+
+saludo=lambda:"hola"
+print(saludo())
+
+# otro ejemplo
+
+saludo=lambda n:f"hola",{n} ,"{a}"
+print(saludo("ruth", "castillo"))
+
+
+# crear un programa anonimo que reciba como parametro una lista de 5 numeros y retorne  dos listas una con los numeros pares y otra con numeros impares.
+
+
+#tarea hacer en una linea mas pequeña utilizando dicconario objetos
+
+lista_num=[4,7,5,3,47,2,10,8,10]
+pares=lambda l:[n for n in lista if n%2==0]
+impares=lambda l:[n for n in lista if n%2==0]
+print(pares(lista))
+print(impares(lista))
+
+#ejemplo de callback
+
+int(input())
+
+def mensaje(m:function):
+    print(m)
+def pedir_nombre():
+    nombre=input("ingresa tu nombre")
+    return nombre
+mensaje(pedir_nombre())
