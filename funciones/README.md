@@ -366,3 +366,96 @@ minaa(lista)
 
 #### averiguar sobre map(),filter(),reduce() (TAREA) cada uno con informacion y ejemplos
 
+
+# MAP() 
+ 
+La función map() en Python `aplica una función a cada uno de los elementos de una lista`.
+
+`map(una_funcion, una_lista)`
+
+Imagina que tienes una lista de enteros y quieres obtener una nueva lista con el cuadrado de cada uno de ellos.
+
+Seguramente, lo primero que se te ha ocurrido es algo similar a lo siguiente:
+
+enteros = [1, 2, 4, 7]
+cuadrados = []
+for e in enteros:
+    cuadrados.append(e ** 2)
+     
+print(cuadrados)
+[1, 4, 16, 49]
+
+### Sin embargo, podemos usar una función anónima en combinación con map() para obtener el mismo resultado de una manera mucho más simple:
+
+enteros = [1, 2, 4, 7]
+cuadrados = list(map(lambda x : x ** 2, enteros))
+print(cuadrados)
+[1, 4, 16, 49]
+
+La cosa se vuelve todavía más interesante cuando, en lugar de una lista de valores, pasamos como segundo parámetro una lista de funciones:
+
+enteros = [1, 2, 4, 7]
+def cuadrado(x):
+    return x ** 2
+def cubo(x):
+    return x ** 3
+funciones = [cuadrado, cubo]
+for e in enteros:
+    valores = list(map(lambda x : x(e), funciones))
+    print(valores)
+[1, 1]
+[4, 8]
+[16, 64]
+[49, 343]
+
+# FILTER()
+
+La función filter() `filtra una lista de elementos para los que una función devuelve True`.
+
+`filter(una_funcion, una_lista)`
+
+Imagina que quieres filtrar una lista de números para obtener solo los valores pares.
+
+De nuevo, una primera aproximación podría ser como la siguiente:
+
+valores = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+pares = []
+for valor in valores:
+    if valor % 2 == 0:
+        pares.append(valor)
+print(pares)
+[2, 4, 6, 8]
+
+### No obstante, podemos usar la función filter() y una función lambda para obtener el mismo resultado con una sola línea de código:
+
+valores = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+pares = list(filter(lambda x : x % 2 == 0, valores))
+print(pares)
+[2, 4, 6, 8]
+
+# REDUCE()
+
+ Esta ultima  función se utiliza principalmente para llevar a cabo un ``cálculo acumulativo sobre una lista de valores y devolver el resultado.``
+
+La función reduce() está incluida en el módulo functools.
+
+En este caso, la función que se pasa como primer parámetro recibe dos argumentos.
+
+Imagina que quieres obtener el resultado de sumar todos los elementos de una lista.
+
+Como en las veces anteriores, la suma la puedes calcular de la siguiente manera:
+
+valores = [2, 4, 6, 5, 4]
+suma = 0
+for el in valores:
+    suma += el
+print(suma)
+21
+
+### Pero también usando la función reduce() en combinación con una función lambda:
+
+from functools import reduce
+suma = reduce(lambda x, y: x + y, valores)
+print(suma)
+21
+
