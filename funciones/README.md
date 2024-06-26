@@ -364,7 +364,7 @@ minaa(lista)
 ```
 
 
-#### averiguar sobre map(),filter(),reduce() (TAREA) cada uno con informacion y ejemplos
+## averiguar sobre map(),filter(),reduce() (TAREA) cada uno con informacion y ejemplos
 
 
 # MAP() 
