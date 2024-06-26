@@ -309,6 +309,7 @@ Cuando se trabaja con números matemáticos es importante disponer de una funci�
 ## AVERIGUAR
 # Tipos de funciones
 ### Funciones anonimas (Funciones lambda)
+ son para ejercicios rapidos  
 una funcion que no tiene nombre lambda es una palabra reservada.
 lambda:"hola"
 
@@ -367,7 +368,9 @@ minaa(lista)
 ## averiguar sobre map(),filter(),reduce() (TAREA) cada uno con informacion y ejemplos
 
 
-# MAP() 
+# MAP()  
+
+`retorna los elementos si hay 10 te devuelve 10`
  
 La función map() en Python `aplica una función a cada uno de los elementos de una lista`.
 
