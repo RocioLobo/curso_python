@@ -156,6 +156,14 @@ impares=lambda l:[n for n in lista if n%2==0]
 print(pares(lista))
 print(impares(lista))
 
+
+
+# otra manera de hacer en linea mas pequeña
+
+separar_pares, separar_impares = lambda lista: [num for num in lista if num % 2 == 0], lambda lista: [num for num in lista if num % 2 != 0]
+print(separar_pares(lista), separar_impares(lista))
+
+
 #ejemplo de callback
 
 int(input())
